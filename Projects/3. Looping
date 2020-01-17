@@ -23,6 +23,13 @@ func fact(input int) (output int) {
 	return
 }
 
+func infinteloop(){
+	for
+	{
+		//Infinte loop as the Init, condition and Post are optional
+	}
+}
+
 func main() {
 	input := 10
 
