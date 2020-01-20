@@ -29,16 +29,32 @@ func main() {
 	for i := 0; i < len(arr); i++ {
 		fmt.Printf("\nValue at %dth position in array is %d", i, arr[i])
 	}
-	
+
 	//Looping over array to print values using range (index only)
 	fmt.Printf("\n\nPrint values using range (index only)")
 	for i := range arr1 {
 		fmt.Printf("\nValue at %dth position in array is %s", i, arr1[i])
 	}
-	
+
+	//Looping over array to print values using range (values only)
+	fmt.Printf("\n\nPrint values using range (values only)")
+	for _, v := range arr1 {
+		fmt.Printf("\nValue at nth position in array is %s", v)
+	}
+
 	//Looping over array to print values using range (index & values)
 	fmt.Printf("\n\nPrint values using range (index & values)")
 	for i, v := range arr2 {
 		fmt.Printf("\nValue at %dth position in array is %0.2f", i, v)
+	}
+
+	//Multi Dimensional Array
+	arr4 := [2][3]string{{"A", "AA", "AAA"},
+		{"B", "BB", "BBB"}}
+		
+	//Print vaues for multi dimensional array
+	fmt.Printf("\n\nPrint vaues for multi dimensional array")
+	for i, v := range arr4 {
+		fmt.Printf("\nValue at %dth position in array is %s", i, v)
 	}
 }
