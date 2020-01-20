@@ -57,12 +57,5 @@ func main() {
 	fmt.Println("\nThe values in slice_arr3 after are:", slice_arr3)
 	fmt.Println("The length of slice_arr3 after is:", len(slice_arr3))
 	fmt.Println("The capacity of slice_arr3 after is:", cap(slice_arr3))
-	
-	//Delete a value to the slice_arr3
-	slice_arr3 = delete(slice_arr3, 0)
-	
-	fmt.Println("\nThe values in slice_arr3 after are:", slice_arr3)
-	fmt.Println("The length of slice_arr3 after is:", len(slice_arr3))
-	fmt.Println("The capacity of slice_arr3 after is:", cap(slice_arr3))
 
 }
