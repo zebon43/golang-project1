@@ -9,3 +9,4 @@ Details:
 3. Looping - Fibonacci Series and Factorial implementation using loops
 4. Conditional Statement1 - Sample code for 'if' statements
 5. Conditional Statement2 - Sample code for 'switch' statements
+6. Arrays - Sample code for Array
