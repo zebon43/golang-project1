@@ -11,3 +11,4 @@ Details:
 5. Conditional Statement2 - Sample code for 'switch' statements
 6. Arrays - Sample code for Array and various operations related to array
 7. Slices - Sample code for slices and various operations related to slice
+8. Maps - Sample Code for map type
