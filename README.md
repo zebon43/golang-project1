@@ -14,4 +14,5 @@ Details:
 08. Maps - Sample Code for map type
 09. Pointers - Sample code for demo of pointers
 10. Structures - Sample Code for demo of Struct
-11. Methods - Sample for Methods
+11. Methods - Sample for demo of Methods
+12. Interfaces - Sample code for demo of Interfaces
