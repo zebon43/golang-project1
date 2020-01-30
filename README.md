@@ -16,3 +16,4 @@ Details:
 10. Structures - Sample Code for demo of Struct
 11. Methods - Sample for demo of Methods
 12. Interfaces - Sample code for demo of Interfaces
+13. Routines - Sample code for demo of Go Routines
