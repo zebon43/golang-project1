@@ -1,0 +1,35 @@
+/*
+If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+
+Finish the solution so that it returns the sum of all the multiples of 3 or 5 below the number passed in.
+
+Specification
+solution(number)
+Finds the sum of multiples of 3 or 5 that is less than the provided number
+
+Parameters
+number: int - Maximum number to check against
+
+Return Value
+int - Sum of all multiples of either 3 or 5
+
+Examples
+number	Return Value
+10	23
+200	9168
+
+*/
+// The solution setup is where you can provide the candidate with the basic framework for their solution.
+package challenge
+
+func Solution(numbers int) int {
+  sumMultiple := 0 
+  for i:=numbers-1; i > 0; i-- {
+    
+    //check for multiple of 3
+    if i%3 == 0 || i%5 == 0{
+      sumMultiple = sumMultiple + i
+    }
+  }
+return sumMultiple
+}
