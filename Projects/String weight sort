@@ -1,0 +1,77 @@
+/*
+You are provided a string containing a list of positive integers separated by a space (" "). Take each value and calculate the sum of its digits, which we call it's "weight". Then return the list in ascending order by weight, as a string joined by a space.
+
+For example 99 will have "weight" 18, 100 will have "weight"
+1 so in the ouput 100 will come before 99.
+
+Specification
+orderWeight(strng)
+Parameters
+strng: String - String of digits to be summed and put in order
+
+Return Value
+String - A string of digits ordered by their "weight"
+
+Example:
+
+"56 65 74 100 99 68 86 180 90" ordered by numbers weights becomes:
+"100 180 90 56 65 74 68 86 99"
+
+When two numbers have the same "weight", let's consider them to be strings and not numbers:
+
+100 is before 180 because its "weight" (1) is less than the one of 180 (9)
+and 180 is before 90 since, having the same "weight" (9) it comes before as a string.
+
+All numbers in the list are positive integers and the list can be empty.
+*/
+// The solution setup is where you can provide the candidate with the basic framework for their solution.
+package challenge
+
+import (
+"strings"
+"strconv"
+  "sort"
+)
+
+func OrderByWeight(strn string) string {
+	var weight []int
+	var result string
+
+	tempStrn := strings.Fields(strn)
+	for _, s := range tempStrn {
+		i := 0
+		intt, _ := strconv.Atoi(s)
+		weight = append(weight, addDigits(intt))
+		i++
+	}
+
+	tempWT := make([]int, len(weight))
+	copy(tempWT, weight)
+	sort.Ints(tempWT)
+
+	for i := 0; i < len(tempWT); i++ {
+		for j := 0; j < len(weight); j++ {
+			if tempWT[i] == weight[j] {
+              if i == len(tempWT)-1{
+                result = result + tempStrn[j]
+              } else {
+                result = result + tempStrn[j] + " "
+              }
+				tempStrn = append(tempStrn[:j], tempStrn[j+1:]...)
+				weight = append(weight[:j], weight[j+1:]...)
+				break
+			}
+		}
+	}
+
+	return result
+}
+
+func addDigits(input int) int {
+	result := 0
+	if input == 0 {
+		return 0
+	}
+	result = input%10 + addDigits(input/10)
+	return result
+}
